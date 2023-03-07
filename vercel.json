@@ -1,12 +1,12 @@
 {
-	"redirects": [
+	"rewrites": [
 		{
 			"source": "/",
-			"destination": "/api/serverless"
+			"destination": "/api/serverless.ts"
 		},
 		{
 			"source": "/contract",
-			"destination": "/api/contract"
+			"destination": "/api/contract.ts"
 		}
 	]
 }
