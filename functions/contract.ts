@@ -15,7 +15,13 @@ import {
 	// verifyTransactionSchema,
 } from "./schema/contract";
 
-export default async function contractController(fastify: FastifyInstance, opts: FastifyServerOptions, done) {
+export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done) {
+	fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
+		res.status(200).send({
+			hello: "mars",
+		});
+	});
+
 	fastify.register(
 		async (instance: FastifyInstance, opts: FastifyServerOptions, done) => {
 			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {

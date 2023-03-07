@@ -1,8 +1,12 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/api/serverless.ts"
-        }
-    ]
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/api/serverless.ts"
+		},
+		{
+			"source": "/(.*)",
+			"destination": "/api/contract.ts"
+		}
+	]
 }
