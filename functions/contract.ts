@@ -17,7 +17,7 @@ import {
 
 export default async function contractController(fastify: FastifyInstance) {
 	fastify.get(
-		"/ping",
+		"/",
 		async (request: any, resp: any) => {
 			// const { name,  } = request.body;
 
