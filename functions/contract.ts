@@ -1,4 +1,4 @@
-import { FastifyInstance } from "fastify";
+import { FastifyInstance, FastifyServerOptions } from "fastify";
 
 import {
 	deployContractSchema,
@@ -15,19 +15,24 @@ import {
 	// verifyTransactionSchema,
 } from "./schema/contract";
 
-export default async function contractController(fastify: FastifyInstance) {
-	fastify.get(
-		"/",
-		async (request: any, resp: any) => {
-			// const { name,  } = request.body;
+export default async function contractController(fastify: FastifyInstance, opts: FastifyServerOptions, done) {
+	fastify.register(
+		async (instance: FastifyInstance, opts: FastifyServerOptions, done) => {
+			fastify.get("/", async (request: any, resp: any) => {
+				// const { name,  } = request.body;
 
-			// const contract = await fastify.service.contract.deployAll(
-			// 	request.body
-			// );
+				// const contract = await fastify.service.contract.deployAll(
+				// 	request.body
+				// );
 
-			resp.success({
-				hello: 'Earth'
+				resp.success({
+					hello: "Earth",
+				});
 			});
+			done();
+		},
+		{
+			prefix: "/contract",
 		}
 	);
 
@@ -41,7 +46,7 @@ export default async function contractController(fastify: FastifyInstance) {
 	//       organizerId,
 	//       eventId,
 	//       ticketId,
-	
+
 	//       ticketTypeId,
 	//     } = req.body;
 
