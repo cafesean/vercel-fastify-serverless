@@ -1,4 +1,4 @@
-import { FastifyInstance, FastifyServerOptions } from "fastify";
+import { FastifyInstance, FastifyServerOptions, FastifyReply, FastifyRequest } from "fastify";
 
 import {
 	deployContractSchema,
@@ -18,15 +18,15 @@ import {
 export default async function contractController(fastify: FastifyInstance, opts: FastifyServerOptions, done) {
 	fastify.register(
 		async (instance: FastifyInstance, opts: FastifyServerOptions, done) => {
-			fastify.get("/", async (request: any, resp: any) => {
+			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
 				// const { name,  } = request.body;
 
 				// const contract = await fastify.service.contract.deployAll(
 				// 	request.body
 				// );
 
-				resp.success({
-					hello: "Earth",
+				res.status(200).send({
+					hello: "earth",
 				});
 			});
 			done();
@@ -35,7 +35,7 @@ export default async function contractController(fastify: FastifyInstance, opts:
 			prefix: "/contract",
 		}
 	);
-
+	done();
 	// fastify.post(
 	//   '/:contract_id/register/:class_id',
 	//   registerContractEventSchema(fastify),
