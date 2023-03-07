@@ -24,7 +24,7 @@ export default async function (fastify: FastifyInstance, opts: FastifyServerOpti
 				});
 			});
 
-			fastify.get("/test", async (req: FastifyRequest, res: FastifyReply) => {
+			fastify.get("/:contract_id", async (req: FastifyRequest, res: FastifyReply) => {
 				// const { name,  } = request.body;
 
 				// const contract = await fastify.service.contract.deployAll(
