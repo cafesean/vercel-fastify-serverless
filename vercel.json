@@ -5,7 +5,7 @@
 			"destination": "/api/serverless.ts"
 		},
 		{
-			"source": "/contract",
+			"source": "/contract/(.*)",
 			"destination": "/api/contract.ts"
 		}
 	]
