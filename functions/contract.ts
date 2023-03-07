@@ -16,15 +16,15 @@ import {
 } from "./schema/contract";
 
 export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done) {
-	fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
-		res.status(200).send({
-			hello: "mars",
-		});
-	});
-
 	fastify.register(
 		async (instance: FastifyInstance, opts: FastifyServerOptions, done) => {
 			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
+				res.status(200).send({
+					hello: "mars",
+				});
+			});
+
+			fastify.get("/test", async (req: FastifyRequest, res: FastifyReply) => {
 				// const { name,  } = request.body;
 
 				// const contract = await fastify.service.contract.deployAll(
