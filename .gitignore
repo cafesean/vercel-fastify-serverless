@@ -1,2 +1,16 @@
-.vercel
+dist
+src
 node_modules
+.deps
+.env
+package-lock.json
+yarn.lock
+.DS_Store
+.gitignore
+test.http
+
+contracts/artifacts
+cache
+ethers
+type*
+*.*_

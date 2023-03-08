@@ -1,21 +1,21 @@
 import { FastifyInstance, FastifyServerOptions, FastifyReply, FastifyRequest } from "fastify";
 
-import {
-	deployContractSchema,
-	mintContractNFTSchema,
-	addContractClassSchema,
-	// setContractClassSchema,
-	// addContractAdminSchema,
-	// transferContractNFTSchema,
-	// burnContractNFTSchema,
-	// registerContractEventSchema,
-	// queryContractSchema,
-	// speedupTransactionSchema,
-	// confirmTransactionSchema,
-	// verifyTransactionSchema,
-} from "./schema/contract";
+// import {
+// 	deployContractSchema,
+// 	mintContractNFTSchema,
+// 	addContractClassSchema,
+// 	// setContractClassSchema,
+// 	// addContractAdminSchema,
+// 	// transferContractNFTSchema,
+// 	// burnContractNFTSchema,
+// 	// registerContractEventSchema,
+// 	// queryContractSchema,
+// 	// speedupTransactionSchema,
+// 	// confirmTransactionSchema,
+// 	// verifyTransactionSchema,
+// } from "./schema/contract";
 
-export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done) {
+export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done:any) {
 	fastify.register(
 		async (instance: FastifyInstance, opts: FastifyServerOptions, done) => {
 			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
@@ -27,12 +27,13 @@ export default async function (fastify: FastifyInstance, opts: FastifyServerOpti
 			fastify.get("/:contract_id", async (req: FastifyRequest, res: FastifyReply) => {
 				// const { name,  } = request.body;
 
-				// const contract = await fastify.service.contract.deployAll(
-				// 	request.body
-				// );
+
+				const contract = await fastify.service.contract.deployAll(
+					req.body
+				);
 
 				res.status(200).send({
-					hello: "earth",
+					contract_id: contract,
 				});
 			});
 			done();
