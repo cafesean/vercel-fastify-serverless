@@ -10,8 +10,8 @@ const app = Fastify({
 });
 
 // Register your application as a normal plugin.
-app.register(import("../functions/contract"), {
-	prefix: "/contract",
+app.register(import("../functions/index.route"), {
+	prefix: "/",
 });
 
 export default async (req: any, res: any) => {

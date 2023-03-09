@@ -1,4 +1,5 @@
 import { FastifyInstance, FastifyServerOptions, FastifyReply, FastifyRequest } from "fastify";
+import { ContractService } from "./service";
 
 // import {
 // 	deployContractSchema,
@@ -15,32 +16,44 @@ import { FastifyInstance, FastifyServerOptions, FastifyReply, FastifyRequest } f
 // 	// verifyTransactionSchema,
 // } from "./schema/contract";
 
-export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done:any) {
+export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done: any) {
 	fastify.register(
-		async (instance: FastifyInstance, opts: FastifyServerOptions, done) => {
-			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
+		async () => {
+			fastify.get("/hello", async (req: FastifyRequest, res: FastifyReply) => {
+				console.log("In contract.route.ts")
 				res.status(200).send({
-					hello: "mars",
+					hello: "earth",
 				});
 			});
 
-			fastify.get("/:contract_id", async (req: FastifyRequest, res: FastifyReply) => {
-				// const { name,  } = request.body;
+			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
+				console.log("In contract.route.ts")
+				res.status(200).send({
+					hello: "earthlings",
+				});
+			});
 
-
-				const contract = await fastify.service.contract.deployAll(
-					req.body
-				);
+			fastify.get("/yo", async (req: FastifyRequest, res: FastifyReply) => {
+				const service = new ContractService();
+				console.log("In contract.route.ts contract/hello");
+				const hello = await service.hello();
 
 				res.status(200).send({
-					contract_id: contract,
+					result: hello,
+				});
+			});
+
+			fastify.put("/deploy", async (req: FastifyRequest, res: FastifyReply) => {
+				const service = new ContractService();
+
+				const deploy = await service.deployAll(req.body);
+
+				res.status(200).send({
+					result: deploy,
 				});
 			});
 			done();
 		},
-		{
-			prefix: "/contract",
-		}
 	);
 	done();
 	// fastify.post(

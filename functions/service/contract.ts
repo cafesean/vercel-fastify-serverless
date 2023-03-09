@@ -41,6 +41,11 @@ async function attachContract(address: string, contract: string) {
 // }
 
 export class ContractService extends BaseService {
+	async hello() {
+		return "contract-api v1";
+	}
+
+
 	async addClass(contract_address: string, reqBody: any) {
 		console.log("contract_address: ", contract_address);
 

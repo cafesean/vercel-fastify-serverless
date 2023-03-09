@@ -36,7 +36,7 @@ specifiers:
   fastify-plugin: ^4.3.0
   fastify-prisma-client: ^5.0.0
   fastify-tsconfig: ^1.0.1
-  hardhat: ^2.12.1
+  hardhat: ^2.13.0
   hardhat-gas-reporter: ^1.0.9
   http-status-codes: ^2.2.0
   moment-timezone: ^0.5.38

@@ -1,12 +1,13 @@
 {
+	"trailingSlash": false,
 	"rewrites": [
 		{
 			"source": "/",
-			"destination": "/api/serverless.ts"
+			"destination": "/api/serverless.api.ts"
 		},
 		{
 			"source": "/contract/(.*)",
-			"destination": "/api/contract.ts"
+			"destination": "/api/contract.api.ts"
 		}
 	]
 }
