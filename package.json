@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"vercel": "pnpm prisma generate && vercel dev",
+		"vercel": "pnpm exec prisma generate && vercel dev",
 		"bld": "tsc --build tsconfig.json"
 	},
 	"author": "",
