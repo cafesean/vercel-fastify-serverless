@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"vercel": "pnpm exec prisma generate && vercel dev",
+		"vercel": "vercel dev",
+		"postinstall": "pnpm exec prisma generate",
 		"bld": "tsc --build tsconfig.json"
 	},
 	"author": "",
@@ -34,6 +35,7 @@
 		"fastify-cli": "^5.5.0",
 		"fastify-plugin": "^4.3.0",
 		"fastify-tsconfig": "^1.0.1",
+		"hardhat": "^2.13.0",
 		"hardhat-gas-reporter": "^1.0.9",
 		"moment-timezone": "^0.5.38",
 		"path": "^0.12.7",
