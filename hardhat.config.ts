@@ -18,7 +18,7 @@ const config: HardhatUserConfig = {
 			},
 		},
 	},
-	defaultNetwork: "hardhat",
+	defaultNetwork: "PolygonMumbai",
 	networks: {
 		PolygonMumbai: {
 			url: NETWORK_TESTNET_RPC_URL,
