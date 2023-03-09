@@ -17,6 +17,6 @@
 		"sourceMap": false,
 		"skipLibCheck": true
 	},
-	"include": ["**/*.ts", "*.ts", "*.js", "./hardhat.config.*"],
+	"include": ["**/*.ts", "*.ts", "*.js", "ethers/**/*.sol", "ethers/**/*.json"],
 	"files": ["./hardhat.config.ts"]
 }

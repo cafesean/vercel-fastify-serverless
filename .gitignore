@@ -3,6 +3,7 @@ src
 node_modules
 .deps
 .env
+.vercel
 package-lock.json
 yarn.lock
 .DS_Store
