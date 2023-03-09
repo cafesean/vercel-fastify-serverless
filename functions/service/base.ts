@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 import { FastifyBaseLogger } from 'fastify';
 // import Redis from 'ioredis';
 
