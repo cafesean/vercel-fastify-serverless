@@ -1,7 +1,7 @@
 import { BaseService } from "./base";
 import { ethers } from "hardhat";
 import * as errors from "../errors";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 // Migrate these to params
 const ProxySol = "ProxyContract";
@@ -85,7 +85,7 @@ export class ContractService extends BaseService {
 				}
 			}
 		} catch (e: any) {
-			throw new Error("Error in adding class: ", e);
+			throw new Error("Error in adding class");
 		}
 		if (reqBody.template != "0x0000000000000000000000000000000000000000") {
 			await contractProxy
