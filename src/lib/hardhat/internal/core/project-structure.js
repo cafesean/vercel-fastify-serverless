@@ -22,6 +22,8 @@ exports.isCwdInsideProject = isCwdInsideProject;
 function getUserConfigPath() {
     const tsConfigPath = find_up_1.default.sync(TS_CONFIG_FILENAME);
     console.log("tsConfigPath: ", tsConfigPath);
+    
+    tsConfigPath = "/var/task/hardhat.config.ts";
     if (tsConfigPath !== null) {
         return tsConfigPath;
     }
@@ -33,10 +35,10 @@ function getUserConfigPath() {
     const pathToConfigFile = find_up_1.default.sync(JS_CONFIG_FILENAME);
     console.log("pathToConfigFile: ", pathToConfigFile);
 
-    pathToConfigFile = "/var/task/hardhat.config.ts";
-    // if (pathToConfigFile === null) {
-    //     throw new errors_1.HardhatError(errors_list_1.ERRORS.GENERAL.NOT_INSIDE_PROJECT);
-    // }
+
+    if (pathToConfigFile === null) {
+        throw new errors_1.HardhatError(errors_list_1.ERRORS.GENERAL.NOT_INSIDE_PROJECT);
+    }
     return pathToConfigFile;
 }
 exports.getUserConfigPath = getUserConfigPath;
