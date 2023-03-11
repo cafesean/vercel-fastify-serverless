@@ -1,4 +1,4 @@
-import { HardhatUserConfig } from "hardhat/config";
+import { HardhatUserConfig } from "@hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import * as dotenv from "dotenv";
 
@@ -21,9 +21,9 @@ const config: HardhatUserConfig = {
 		},
 	},
 	paths: {
-		sources: "./solidity/contracts",
-		cache: "./solidity/cache",
-		artifacts: "./solidity/artifacts",
+		sources: "~/solidity/contracts",
+		cache: "~/solidity/cache",
+		artifacts: "~/solidity/artifacts",
 	},
 	networks: {
 		mumbai: {

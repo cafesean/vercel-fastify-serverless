@@ -13,10 +13,10 @@
 	],
 	"functions": {
 		"api/contract.*": {
-			"includeFiles": "solidity/**"
+			"includeFiles": "/solidity/**/*"
 		},
 		"api/token.*": {
-			"includeFiles": "solidity/**"
+			"includeFiles": "/solidity/**/*"
 		}
 	}
 }
