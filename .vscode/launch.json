@@ -5,8 +5,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "pnpm start --listen 4000",
-      "name": "Run vercel start",
+      "command": "vercel dev --listen 4000",
+      "name": "vercel dev",
       "request": "launch",
       "type": "node-terminal"
     },

@@ -17,7 +17,7 @@ import { ContractService } from "./service";
 
 export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done: any) {
 	fastify.register(async () => {
-		fastify.get("/hello", async (req: FastifyRequest, res: FastifyReply) => {
+		fastify.get("/hello/", async (req: FastifyRequest, res: FastifyReply) => {
 			console.log("In contract.route.ts");
 			res.status(200).send({
 				hello: "earth",
@@ -41,7 +41,7 @@ export default async function (fastify: FastifyInstance, opts: FastifyServerOpti
 		// 	});
 		// });
 
-		fastify.put("/deploy", async (req: FastifyRequest, res: FastifyReply) => {
+		fastify.put("/deploy/", async (req: FastifyRequest, res: FastifyReply) => {
 			const service = new ContractService();
 
 			const deploy = await service.deployAll(req.body);

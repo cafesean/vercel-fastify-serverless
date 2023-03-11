@@ -1,14 +1,14 @@
 {
-	"trailingSlash": false,
+	"trailingSlash": true,
   "outputDirectory": "build",
 	"rewrites": [
 		{
 			"source": "/",
-			"destination": "api/serverless.api.ts"
+			"destination": "/api/serverless.api.ts"
 		},
 		{
 			"source": "/contract/(.*)",
-			"destination": "api/contract.api.ts"
+			"destination": "/api/contract.api.ts"
 		}
 	],
 	"functions": {
