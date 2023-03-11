@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyServerOptions, FastifyReply, FastifyRequest } from "fastify";
-import { ContractService } from "./service";
+import { ContractService } from "../service";
 
 // import {
 // 	deployContractSchema,
