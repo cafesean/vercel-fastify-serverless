@@ -16,7 +16,6 @@ specifiers:
   '@nomicfoundation/hardhat-chai-matchers': ^1.0.4
   '@nomicfoundation/hardhat-network-helpers': ^1.0.6
   '@nomicfoundation/hardhat-toolbox': ^2.0.0
-  '@nomicfoundation/solidity-analyzer': ^0.1.1
   '@nomiclabs/hardhat-ethers': ^2.2.2
   '@nomiclabs/hardhat-etherscan': ^3.1.2
   '@openzeppelin/contracts': ^4.8.0
@@ -60,7 +59,6 @@ dependencies:
   '@nomicfoundation/hardhat-chai-matchers': 1.0.6_dntrasblfyeflsnrtjxr3d547a
   '@nomicfoundation/hardhat-network-helpers': 1.0.8_hardhat@2.13.0
   '@nomicfoundation/hardhat-toolbox': 2.0.2_6r3obpdh2r5c2yoi6p2m5eyi2q
-  '@nomicfoundation/solidity-analyzer': 0.1.1
   '@nomiclabs/hardhat-ethers': 2.2.2_wknqauzjtp3mhprkntsmqpccee
   '@nomiclabs/hardhat-etherscan': 3.1.7_hardhat@2.13.0
   '@openzeppelin/contracts': 4.8.2
