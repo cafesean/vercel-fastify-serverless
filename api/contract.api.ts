@@ -3,6 +3,7 @@ dotenv.config();
 
 // Require the framework
 import Fastify from "fastify";
+import fastifyFormbody from "@fastify/formbody";
 
 // Instantiate Fastify with some config
 const app = Fastify({
@@ -10,7 +11,9 @@ const app = Fastify({
 });
 
 // Register your application as a normal plugin.
-app.register(import("../functions/contract.route"), {
+app
+.register(fastifyFormbody)
+.register(import("../functions/contract.route"), {
 	prefix: "/contract",
 });
 

@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "../node_modules/.prisma/client"
+  output   = "../node_modules/.prisma/client"
 }
 
 datasource db {
@@ -23,10 +23,13 @@ model allowlist {
 
 model contract {
   contract_address String             @id(map: "contracts_pkey")
-  owner            String             @db.VarChar(50)
-  name             String             @db.VarChar(250)
+  owner            String             
+  name             String             
   created_at       DateTime           @default(now())
   updated_at       DateTime           @default(now())
+  type             String             
+  version          String             
+  abi              Json[]             
   contract_classes contract_classes[]
 }
 

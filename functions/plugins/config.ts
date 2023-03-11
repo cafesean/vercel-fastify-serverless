@@ -67,12 +67,12 @@ export default fp(async (fastify) => {
     //   password: getStringEnv('redis_password', '') || undefined,
     // },
     polygon: {
-      baseUrl: getStringEnv('polygon_base_url'),
-      apiKey: getStringEnv('polygon_api_key'),
+      baseUrl: getStringEnv('POLYGON_BASE_URL'),
+      apiKey: getStringEnv('POLYGON_API_KEY'),
     },
     alchemy: {
-      apiKey: getStringEnv('alchemy_api_key'),
-      network: getStringEnv('alchemy_network'),
+      apiKey: getStringEnv('ALCHEMY_API_KEY'),
+      network: getStringEnv('ALCHEMY_NETWORK'),
     },
   }
   fastify.decorate('config', config);

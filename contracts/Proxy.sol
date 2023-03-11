@@ -3,8 +3,8 @@ pragma solidity ^0.8.17;
 
 import "./Access.sol";
 import "./Base.sol";
-import "./interfaces/ITemplate.sol";
-import "./interfaces/IDelegate.sol";
+import "./interface/ITemplate.sol";
+import "./interface/IDelegate.sol";
 
 import "hardhat/console.sol";
 

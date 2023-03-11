@@ -6,8 +6,8 @@ export default fp((fastify:any, _:any, done:any) => {
   const alchemyClient = new Alchemy(
     // fastify.config.alchemy.apiKey,
     // fastify.config.alchemy.network,
-    process.env.TESTNET_PRIVATE_KEY!,
-    process.env.ALCHEMY_TESTNET_URL,
+    process.env.ALCHEMY_API_KEY!,
+    process.env.ALCHEMY_NETWORK,
   );
   fastify.decorate('alchemy', alchemyClient);
   done();

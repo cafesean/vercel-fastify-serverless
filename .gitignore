@@ -12,6 +12,7 @@ test.http
 
 contracts/artifacts
 cache
-ethers
+ethers/*
 type*
 *.*_
+artifacts

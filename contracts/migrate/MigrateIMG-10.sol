@@ -3,7 +3,7 @@ pragma solidity ^0.8.17;
 
 import "../Base.sol";
 import "../Access.sol";
-import "../interfaces/IProxy.sol";
+import "../interface/IProxy.sol";
 import "hardhat/console.sol";
 
 interface ITargetProxy {

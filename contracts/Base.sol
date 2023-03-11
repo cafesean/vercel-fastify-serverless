@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 // import "@openzeppelin/contracts/utils/Strings.sol";
 // import "@openzeppelin/contracts/utils/Base64.sol";
-import "./interfaces/ITemplate.sol";
+import "./interface/ITemplate.sol";
 import "./Access.sol";
 import "hardhat/console.sol";
 

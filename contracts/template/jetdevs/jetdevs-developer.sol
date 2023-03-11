@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 // import "../Access.sol";
-import "../../interfaces/IProxy.sol";
+import "../../interface/IProxy.sol";
 import "hardhat/console.sol";
 
 contract TemplateContract is  

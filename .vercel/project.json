@@ -6,10 +6,10 @@
     "framework": null,
     "devCommand": null,
     "installCommand": null,
-    "buildCommand": "pnpm bld",
-    "outputDirectory": "dist",
+    "buildCommand": null,
+    "outputDirectory": null,
     "rootDirectory": null,
     "directoryListing": false,
-    "nodeVersion": "18.x"
+    "nodeVersion": "16.x"
   }
 }

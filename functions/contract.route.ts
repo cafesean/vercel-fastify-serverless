@@ -1,6 +1,5 @@
 import { FastifyInstance, FastifyServerOptions, FastifyReply, FastifyRequest } from "fastify";
 import { ContractService } from "./service";
-
 // import {
 // 	deployContractSchema,
 // 	mintContractNFTSchema,
@@ -17,44 +16,42 @@ import { ContractService } from "./service";
 // } from "./schema/contract";
 
 export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done: any) {
-	fastify.register(
-		async () => {
-			fastify.get("/hello", async (req: FastifyRequest, res: FastifyReply) => {
-				console.log("In contract.route.ts")
-				res.status(200).send({
-					hello: "earth",
-				});
+	fastify.register(async () => {
+		fastify.get("/hello", async (req: FastifyRequest, res: FastifyReply) => {
+			console.log("In contract.route.ts");
+			res.status(200).send({
+				hello: "earth",
 			});
+		});
 
-			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
-				console.log("In contract.route.ts")
-				res.status(200).send({
-					hello: "earthlings",
-				});
+		fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
+			console.log("In contract.route.ts");
+			res.status(200).send({
+				hello: "earthlings",
 			});
+		});
 
-			fastify.get("/yo", async (req: FastifyRequest, res: FastifyReply) => {
-				const service = new ContractService();
-				console.log("In contract.route.ts contract/hello");
-				const hello = await service.hello();
+		// fastify.get("/yo", async (req: FastifyRequest, res: FastifyReply) => {
+		// 	const service = new ContractService();
+		// 	console.log("In contract.route.ts contract/hello");
+		// 	const hello = await service.hello();
 
-				res.status(200).send({
-					result: hello,
-				});
+		// 	res.status(200).send({
+		// 		result: hello,
+		// 	});
+		// });
+
+		fastify.put("/deploy", async (req: FastifyRequest, res: FastifyReply) => {
+			const service = new ContractService();
+
+			const deploy = await service.deployAll(req.body);
+
+			res.status(200).send({
+				result: deploy,
 			});
-
-			fastify.put("/deploy", async (req: FastifyRequest, res: FastifyReply) => {
-				const service = new ContractService();
-
-				const deploy = await service.deployAll(req.body);
-
-				res.status(200).send({
-					result: deploy,
-				});
-			});
-			done();
-		},
-	);
+		});
+		done();
+	});
 	done();
 	// fastify.post(
 	//   '/:contract_id/register/:class_id',
