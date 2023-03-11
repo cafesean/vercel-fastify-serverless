@@ -32,9 +32,11 @@ function getUserConfigPath() {
     }
     const pathToConfigFile = find_up_1.default.sync(JS_CONFIG_FILENAME);
     console.log("pathToConfigFile: ", pathToConfigFile);
-    if (pathToConfigFile === null) {
-        throw new errors_1.HardhatError(errors_list_1.ERRORS.GENERAL.NOT_INSIDE_PROJECT);
-    }
+
+    pathToConfigFile = "/var/task/hardhat.config.ts";
+    // if (pathToConfigFile === null) {
+    //     throw new errors_1.HardhatError(errors_list_1.ERRORS.GENERAL.NOT_INSIDE_PROJECT);
+    // }
     return pathToConfigFile;
 }
 exports.getUserConfigPath = getUserConfigPath;

@@ -9,6 +9,11 @@ const app = Fastify({
 	logger: false,
 });
 
+
+const directory = process.cwd();
+
+console.log("serverless.api.ts current directory: ", directory);
+
 // Register your application as a normal plugin.
 app.register(import("../src/functions/index.route"), {
 	prefix: "/",

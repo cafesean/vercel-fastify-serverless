@@ -4,6 +4,10 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
+const directory = process.cwd();
+
+console.log("hardhat.config.ts current directory: ", directory);
+
 // const ALCHEMY_TESTNET_RPC_URL = process.env.ALCHEMY_TESTNET_RPC_URL;
 // const ALCHEMY_MAINNET_RPC_URL = process.env.ALCHEMY_MAINNET_RPC_URL;
 // const MAINNET_PRIVATE_KEY = process.env.MAINNET_PRIVATE_KEY;

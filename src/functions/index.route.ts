@@ -20,9 +20,14 @@ import { FastifyInstance, FastifyReply, FastifyRequest, FastifyServerOptions } f
 export default async function (fastify: FastifyInstance, opts: FastifyServerOptions, done: any) {
 	fastify.register(
 		async () => {
-
 			fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
-				console.log("In index.route.ts")
+				const directory = process.cwd();
+				console.log("index.api.ts current directory: ", directory);
+				
+				const path: string = __filename;
+				console.log("index.api.ts path: ", path);
+				
+				console.log("In index.route.ts");
 				res.status(200).send({
 					hello: "World1111",
 				});
