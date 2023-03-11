@@ -7,8 +7,6 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"vercel": "vercel dev --listen 4000",
 		"dev": "pnpm start:dev",
-		"build": "tsc --build tsconfig.json",
-		"start:dev": "tsx watch dev/app.ts",
 		"postinstall": "pnpm exec prisma generate"
 	},
 	"author": "",

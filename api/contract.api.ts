@@ -13,7 +13,7 @@ const app = Fastify({
 // Register your application as a normal plugin.
 app
 .register(fastifyFormbody)
-.register(import("../functions/contract.route"), {
+.register(import("../src/functions/contract.route"), {
 	prefix: "/contract",
 });
 

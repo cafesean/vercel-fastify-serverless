@@ -4,7 +4,7 @@ dotenv.config();
 // Require the framework
 import Fastify from "fastify";
 import { FastifyReply, FastifyRequest } from "fastify";
-import { TokenService } from '../functions/service/token';
+import { TokenService } from '../src/functions/service/token';
 
 // Instantiate Fastify with some config
 const app = Fastify({

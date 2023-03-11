@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@contracts/*": ["contracts/*"]
+			"@contracts/*": ["solidity/contracts/*"]
 		},
 		"allowJs": true,
 		"declaration": false,
@@ -17,6 +17,6 @@
 		"sourceMap": false,
 		"skipLibCheck": true
 	},
-	"include": ["**/*.ts", "*.ts", "*.js"],
-	"files": ["hardhat.config.js"]
+	"include": ["api/**.*.ts", "src/**/*.ts", "src/**/*.js", "solidity/**/*.*"],
+	"files": ["./solidity/hardhat.config.ts"]
 }

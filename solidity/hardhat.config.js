@@ -69,10 +69,15 @@ module.exports = {
 			},
 		},
 	},
+	paths: {
+		sources: "./contracts",
+		cache: "./cache",
+		artifacts: "./artifacts",
+	},
 	networks: {
 		mumbai: {
 			url: MUMBAI_RPC_URL,
-			account: [MUMBAI_PRIVATE_KEY]
+			accounts: [MUMBAI_PRIVATE_KEY]
 		}
 	}
 };
